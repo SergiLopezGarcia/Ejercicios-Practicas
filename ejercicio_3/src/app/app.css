@@ -1,0 +1,86 @@
+.contenedor-biblioteca {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.input-group button {
+  background-color: #1976d2;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #1976d2;
+}
+
+.leido span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.leido {
+  border-left-color: #4caf50;
+  background-color: #f0fdf0;
+}
+
+.acciones {
+  display: flex;
+  gap: 5px;
+}
+
+.acciones button:first-child {
+  background-color: #e0e0e0;
+}
+
+.acciones button:last-child {
+  background-color: #ff5252;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}

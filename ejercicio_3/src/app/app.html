@@ -1,0 +1,31 @@
+<div class="contenedor-biblioteca">
+    <h1>Mis Libros por Leer</h1>
+
+    <div class="input-group">
+        <label for="libro" class="sr-only">Título del libro</label>
+        <input id="libro" [(ngModel)]="nuevoLibro" placeholder="Escribe el título de un libro..."
+            (keyup.enter)="agregarLibro()" />
+
+    </div>
+
+    @if (libros().length > 0) {
+    <p class="resumen">Tienes {{ libros().length }} libros en tu lista.</p>
+    }
+
+    <ul>
+        @for (libro of libros(); track libro.titulo) {
+        <li [class.leido]="libro.leido">
+            <span>{{ libro.titulo }}</span>
+
+            <div class="acciones">
+                <button (click)="marcarComoLeido($index)">
+                    {{ libro.leido ? 'Pendiente' : 'Leído' }}
+                </button>
+                <button (click)="eliminarLibro($index)">Eliminar</button>
+            </div>
+        </li>
+        } @empty {
+        <p class="vacio">Tu lista está vacía. ¡Empieza a leer algo nuevo!</p>
+        }
+    </ul>
+</div>

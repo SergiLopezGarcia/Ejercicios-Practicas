@@ -5,7 +5,7 @@
         <label for="libro" class="sr-only">Título del libro</label>
         <input id="libro" [(ngModel)]="nuevoLibro" placeholder="Escribe el título de un libro..."
             (keyup.enter)="agregarLibro()" />
-
+        <button (click)="agregarLibro()">Añadir</button>
     </div>
 
     @if (libros().length > 0) {
@@ -19,7 +19,7 @@
 
             <div class="acciones">
                 <button (click)="marcarComoLeido($index)">
-                    {{ libro.leido ? 'Pendiente' : 'Leído' }}
+                    {{ libro.leido ? 'Desmarcar' : 'Leído' }}
                 </button>
                 <button (click)="eliminarLibro($index)">Eliminar</button>
             </div>

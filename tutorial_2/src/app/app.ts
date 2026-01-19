@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Contador } from './counter/counter';
+
 import { Crypto } from './crypto';
 @Component({
   selector: 'app-root',
-  imports: [Contador, RouterOutlet],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
 })

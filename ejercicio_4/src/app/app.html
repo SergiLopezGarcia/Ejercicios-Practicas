@@ -1,0 +1,40 @@
+<div class="contenedor-contraseña">
+  <form [formGroup]="passwordForm">
+    <h2>Seguridad de Cuenta</h2>
+    
+    <div class="input-group">
+      <label for="pass">Nueva Contraseña:</label>
+      <input 
+        id="pass" 
+        type="password" 
+        formControlName="password" 
+        placeholder="Escribe tu contraseña segura..."
+      />
+    </div>
+
+    @if (password?.invalid && (password?.dirty || password?.touched)) {
+      <div class="errores">
+        @if (password?.errors?.['required']) { 
+          <p>⚠️ La contraseña es obligatoria.</p> 
+        }
+        @if (password?.errors?.['minlength']) { 
+          <p>❌ Debe tener al menos 8 caracteres.</p> 
+        }
+        
+        @if (password?.errors?.['requiereNumero']) { 
+          <p>❌ Falta incluir un <b>número</b>.</p> 
+        }
+        @if (password?.errors?.['requiereMayuscula']) { 
+          <p>❌ Falta una <b>letra mayúscula</b>.</p> 
+        }
+        @if (password?.errors?.['requiereMinuscula']) { 
+          <p>❌ Falta una <b>letra minúscula</b>.</p> 
+        }
+      </div>
+    }
+
+    <button type="submit" [disabled]="passwordForm.invalid">
+      Actualizar Contraseña
+    </button>
+  </form>
+</div>

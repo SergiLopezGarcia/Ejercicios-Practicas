@@ -1,9 +1,15 @@
-<p>Pagina contador</p>
-<h2>Contador</h2>
+<div class="contador-container">
+  <p>Pagina contador</p>
+  <h2>Contador</h2>
 
-<p>Valor: {{ count() }}</p>
+  <p>Valor: <span class="valor-display">{{ count() }}</span></p>
 
-<button (click)="increment()">
-  Haz clic para incrementar
-</button>
+  <button class="btn-increment" (click)="increment()">
+    Haz clic para incrementar
+  </button>
+  
+  <button class="btn-reset" (click)="reset()">
+    Haz clic para resetear
+  </button>
+</div>
 <!-- Recuerda que te comenté de ponerle un botón de reset para volver a 0 el conteo -->

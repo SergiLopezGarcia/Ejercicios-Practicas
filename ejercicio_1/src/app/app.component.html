@@ -1,5 +1,15 @@
+<main class="main-container">
+  <header class="hero-section">
+    <h1 class="title">¡Hola, {{ title() }}!</h1>
+    <p class="status-msg">
+      Tu aplicación está configurada y listo para contar.
+    </p>
+  </header>
 
-      <h1>Hello, {{ title() }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+  <section class="dashboard">
+    <div class="feature-card">
       <app-counter></app-counter>
-<router-outlet />
+    </div>
+      <router-outlet />
+  </section>
+</main>

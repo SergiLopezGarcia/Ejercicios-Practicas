@@ -1,0 +1,8 @@
+<p>saludo works!</p>
+<div>
+	<label>Tu nombre:</label>
+	<input [(ngModel)]="nombre" placeholder="Escribe tu nombre">
+	@if (nombre) {
+		<p>¡Hola, {{ nombre }}!</p>
+	}
+</div>

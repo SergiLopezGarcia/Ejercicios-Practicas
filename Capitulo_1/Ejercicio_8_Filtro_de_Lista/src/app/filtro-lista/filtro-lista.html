@@ -1,0 +1,7 @@
+<p>filtro-lista works!</p>
+<input [(ngModel)]="textoFiltro" placeholder="Buscar fruta...">
+<ul>
+@for (fruta of frutasFiltradas; track fruta) {
+<li>{{ fruta }}</li>
+}
+</ul>

@@ -1,0 +1,9 @@
+<p>lista-compras works!</p>
+<h2>Lista de Compras</h2>
+<ul>
+@for (producto of productos; track producto.nombre) {
+<li>
+{{ producto.nombre }} - ${{ producto.precio }}
+</li>
+}
+</ul>

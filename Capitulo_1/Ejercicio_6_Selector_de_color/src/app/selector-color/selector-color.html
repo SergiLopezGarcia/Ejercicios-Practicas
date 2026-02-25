@@ -1,0 +1,7 @@
+<p>selector-color works!</p>
+<div [style.background-color]="colorSeleccionado" class="caja">
+	<p>Color actual: {{ colorSeleccionado }}</p>
+</div>
+<button (click)="cambiarColor('red')">Rojo</button>
+<button (click)="cambiarColor('blue')">Azul</button>
+<button (click)="cambiarColor('green')">Verde</button>

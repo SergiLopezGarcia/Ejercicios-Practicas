@@ -1,0 +1,7 @@
+<p>toggle works!</p>
+<button (click)="toggleMensaje()">
+{{ mostrar ? "Ocultar" : "Mostrar" }} Mensaje
+</button>
+@if (mostrar) {
+<p>¡Este mensaje aparece y desaparece!</p>
+}

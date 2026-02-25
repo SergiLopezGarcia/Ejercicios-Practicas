@@ -1,0 +1,23 @@
+<p>registro-estudiantes works!</p>
+<div class="formulario">
+<h2>Registrar Estudiante</h2>
+<input [(ngModel)]="nuevoNombre" placeholder="Nombre">
+<input type="number" [(ngModel)]="nuevaEdad" placeholder="Edad">
+<input [(ngModel)]="nuevoCurso" placeholder="Curso">
+<button (click)="agregarEstudiante()">Añadir</button>
+</div>
+
+<div class="lista">
+<h2>Estudiantes Registrados</h2>
+@if (estudiantes.length === 0) {
+<p>No hay estudiantes registrados aún.</p>
+} @else {
+<ul>
+@for (estudiante of estudiantes; track estudiante.nombre) {
+<li>
+<strong>{{ estudiante.nombre }}</strong> ({{ estudiante.edad }} años) - {{ estudiante.curso }}
+</li>
+}
+</ul>
+}
+</div>

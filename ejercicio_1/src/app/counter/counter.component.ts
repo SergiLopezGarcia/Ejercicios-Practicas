@@ -22,6 +22,11 @@ export class CounterComponent {
    * `signal(0)` es el equivalente directo de `useState(0)`.
    * this.count() -> Lectura (como `count` en React)
    * this.count.set() / .update() -> Escritura (como `setCount` en React)
+   *
+   * APRENDIZAJE:
+   * Usar Signals en Angular permite que la UI se actualice automáticamente cuando el valor cambia,
+   * sin tener que usar detectChanges ni otras técnicas manuales. Es la forma recomendada para manejar
+   * estado reactivo en Angular moderno (v19+).
    */
   count = signal(0);
 
@@ -34,6 +39,7 @@ export class CounterComponent {
     this.count.update((n) => n + 1);
   }
 
+  // COMENTARIO: Este método puede ser reutilizado desde el template para reiniciar el contador.
   reset() {
     this.count.set(0); // Equivalente a setCount(0)
   }

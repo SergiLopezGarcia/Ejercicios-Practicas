@@ -1,15 +1,22 @@
+<!--
+  APUNTES:
+  El template HTML define la estructura visual del componente.
+  Puedes usar {{ ... }} para mostrar valores reactivos (como count()).
+  Los eventos (click) permiten llamar métodos del componente.
+-->
 <div class="contador-container">
   <p>Pagina contador</p>
   <h2>Contador</h2>
 
   <p>Valor: <span class="valor-display">{{ count() }}</span></p>
 
+  <!-- COMENTARIO: El evento (click) llama a increment() en el componente -->
   <button class="btn-increment" (click)="increment()">
     Haz clic para incrementar
   </button>
   
+  <!-- COMENTARIO: El evento (click) llama a reset() en el componente -->
   <button class="btn-reset" (click)="reset()">
     Haz clic para resetear
   </button>
 </div>
-<!-- Recuerda que te comenté de ponerle un botón de reset para volver a 0 el conteo -->

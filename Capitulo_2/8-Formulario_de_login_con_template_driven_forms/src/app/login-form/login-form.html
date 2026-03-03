@@ -1,0 +1,13 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <h1>Login</h1>
+    <h3>Introduce tu nombre de usuario</h3>
+    <input name="email" ngModel required><br>
+    @if (f.submitted && f.controls['email']?.invalid) { <p>Email requerido</p> }
+    <h3>Introduce tu contraseña</h3>
+    <input name="password" ngModel required minlength="4"><br>
+    @if (f.submitted && f.controls['password']?.invalid) { <p>Contraseña requerida (mínimo 4 caracteres)</p> }
+    <br>
+    <button type="submit">Login</button>
+
+
+</form>

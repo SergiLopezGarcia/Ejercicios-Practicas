@@ -1,0 +1,6 @@
+<app-task-input (add)="onAdd($event)"></app-task-input>
+
+<ul>
+@for (task of tasks; track task) { <li>{{ task }}</li> }
+</ul>
+

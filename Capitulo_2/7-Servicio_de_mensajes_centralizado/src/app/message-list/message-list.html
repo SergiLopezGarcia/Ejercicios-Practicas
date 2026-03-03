@@ -1,0 +1,11 @@
+<h3>Mensajes ({{ total() }})</h3>
+
+@if (messages().length === 0) {
+  <p>No hay mensajes todavía.</p>
+} @else {
+  <ul>
+    @for (m of messages(); track m) {
+      <li>{{ m }}</li>
+    }
+  </ul>
+}

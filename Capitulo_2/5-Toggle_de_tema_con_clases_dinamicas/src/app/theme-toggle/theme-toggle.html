@@ -1,0 +1,9 @@
+
+<div [class.dark-mode]="dark" [class.light-mode]="!dark">
+    <p>theme-toggle works!</p>
+    <h1>Modo {{ dark ? 'oscuro' : 'claro' }}</h1> 
+    <!-- Comentario para futuro: {{ dark ? 'oscuro' : 'claro' }} Mira la variable y si es true mostrara el texto oscuro, de lo contrario
+     si es false mostrara el texto claro -->
+    <button (click)="toggle()">Cambiar a {{ dark ? 'claro' : 'oscuro' }}</button>
+
+</div>

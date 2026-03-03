@@ -1,0 +1,11 @@
+.admin {
+    background: red;
+}
+
+.editor {
+    background: blue;
+}
+
+.viewer {
+    background: gray;
+}

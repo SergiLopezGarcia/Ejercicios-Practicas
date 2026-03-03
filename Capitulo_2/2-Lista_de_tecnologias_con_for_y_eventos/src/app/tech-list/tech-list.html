@@ -1,0 +1,5 @@
+<p>tech-list works!</p>
+<ul>
+@for (t of techs; track t) { <li (click)="favorita = t" [class.selected]="t === favorita">{{ t }}</li> }
+</ul>
+@if (favorita) { <p >Tu favorita es: {{ favorita }}</p> }
